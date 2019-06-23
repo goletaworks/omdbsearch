@@ -11,7 +11,10 @@ add this line:
 Change <your_api_key> to an api key you get from
 http://www.omdbapi.com/apikey.aspx
 
-Next, install the plugin in developer mode: in the Chrome menu, choose __More Tools -> Developer Tools__. Enable developer mode (top right slider). Then click __Load unpacked__ and select the directory where you checked out this repo.
+Next, install the plugin in developer mode: in the Chrome menu, choose
+__More Tools -> Developer Tools__. Enable developer mode (top right slider).
+Then click __Load unpacked__ and select the directory where you checked out
+this repo.
 
 (TODO: add the api setting to the config screen and package this plugin
 properly.)
