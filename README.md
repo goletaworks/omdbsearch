@@ -6,7 +6,7 @@ on OMDB (http://www.omdbapi.com/). Nothing fancy.
 To use it, you first need to add a file in the root folder named apikey.js and
 add this line:
 
-let omdbApiKey = '<your_api_key>';
+    let omdbApiKey = '<your_api_key>';
 
 Change <your_api_key> to an api key you get from
 http://www.omdbapi.com/apikey.aspx
