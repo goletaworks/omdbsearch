@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+    "name": "OMDB Movie Search",
+    "short_name": "Monitor",
+    "description": "Select a movie title on a page, right-click, choose OMDB Movie Search -> Get Movie Details",
+    "version": "1.0.0",
+
+   "browser_action": {
+      "default_icon": {
+         "19": "images/icon-19.png",
+         "38": "images/icon-38.png"
+      },
+      "default_popup": "html/popup.html",
+      "default_title": "Movie Search"
+   },
+
+   "icons": {
+      "128": "images/icon-128.png",
+      "16": "images/icon-16.png",
+      "48": "images/icon-48.png"
+   },
+
+   "permissions": [ "*://*/", "contextMenus" ],
+
+
+   "background": {
+      "scripts": [ "apikey.js", "scripts/app/defaults.js", "scripts/app/datastore.js", "scripts/app/movie_search.js" ]
+   }
+}

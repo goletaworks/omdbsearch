@@ -1,0 +1,84 @@
+<!doctype html>
+
+<html>
+    <head>
+        <title>Movie Search</title>
+        <script src="../scripts/app/defaults.js"></script>
+        <script src="../scripts/app/datastore.js"></script>
+        <script src="../scripts/app/popup.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="../styles/styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row heading">
+                <div class="col">
+                    <h1>Movie Search</h1>
+                    <p>Select a movie title on a page, right-click, and choose:
+                        <ul>
+                            <li><b>Movie Search -> Get Movie Details</b> to get more info on the movie</li>
+                            <li><b>Movie Search -> Add To List</b> to add the movie to a list</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row toolbar">
+            <div class="col">
+                <!-- <button class="btn btn-primary" id="btn-log-bug">Log a Bug</button> -->
+            </div>
+        </div>
+        <div class="row main">
+            <div class="col">
+                <div class="accordion" id="movieLists">
+                    <div class="card">
+                        <div class="card-header" id="headingPrefs">
+                            <div>
+                                <a href="#" data-toggle="collapse" data-target="#collapsePrefs" aria-expanded="false" aria-controls="collapsePrefs">
+                                Preferences
+                                </a>
+                            </div>
+                        </div>
+
+                        <div id="collapsePrefs" class="collapse" aria-labelledby="headingPrefs" data-parent="#movieLists">
+                            <div class="card-body">
+                                <div>
+                                    <button class="btn" id="btn-restore-defaults">Restore Preference Defaults</button>
+                                </div>
+                                <div id="prefs-json">
+                                </div>
+                                <div class="accordion" id="pref-list">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingMovieLists">
+                            <div>
+                                <a href="#" data-toggle="collapse" data-target="#collapseMovieLists" aria-expanded="false" aria-controls="collapseMovieLists">
+                                Movie Lists (TODO)
+                                </a>
+                            </div>
+                        </div>
+
+                        <div id="collapseMovieLists" class="collapse" aria-labelledby="headingMovieLists" data-parent="#movieListLists">
+                            <div class="card-body">
+                                <button class="btn btn-light" id="btn-clear-movies">Remove All Movie Lists</button>
+                                <div class="accordion" id="movie-lists">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <script src="../scripts/lib/jquery-3.3.1.min.js"></script>
+        <script src="../scripts/lib/popper-1.14.7.min.js"></script>
+        <script src="../scripts/lib/bootstrap-4.3.1.min.js"></script> -->
+    </body>
+</html>

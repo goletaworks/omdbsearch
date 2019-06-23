@@ -1,0 +1,129 @@
+body {
+    font-size: 12px;
+    color: black;
+    padding: 20px;
+    width: 640px;
+}
+
+.row.heading,
+.row.toolbar {
+}
+
+.row.main {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    height: 280px;
+    overflow-y: auto;
+}
+
+.btn {
+    font-size: 12px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.accordion {
+    padding: 5px;
+    border-radius: 0;
+}
+
+.card {
+    border: none;
+    border-radius: 2px;
+}
+
+.card-header {
+    background-color: #dfd;
+    font-weight: bold;
+    font-size: 12px;
+    color: black;
+    padding: 0;
+    margin-top: 2px;
+    padding: 4px;
+}
+
+#headingPages.card-header,
+#headingSearches.card-header,
+#headingPrefs.card-header {
+    background-color: #ddf;
+    font-weight: bold;
+    font-size: 14px;
+    color: black;
+    padding: 0;
+    margin-top: 2px;
+    padding: 4px;
+}
+
+.card-header a {
+    color: inherit;
+    display: block;
+    text-decoration: none;
+}
+
+.card-header a:hover {
+    background-color: #efe;
+}
+
+#headingPages.card-header a:hover,
+#headingSearches.card-header a:hover,
+#headingPrefs.card-header a:hover {
+    background-color: #eef;
+}
+
+.card-body {
+    padding: 4px;
+}
+
+
+table.visit-info, table.query-info {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border: 1px solid #eee;
+}
+
+table.visit-info td,
+table.visit-info th,
+table.query-info td,
+table.query-info th {
+    padding: 4px;
+    border: 1px solid #eee;
+}
+
+
+table.visit-info thead th:nth-child(1),
+table.query-info thead th:nth-child(1) {
+    width: 70%;
+    overflow-x: hidden;
+}
+table.visit-info thead th:nth-child(2),
+table.query-info thead th:nth-child(2) {
+    width: 30%;
+}
+
+h1 { font-size: 24px; letter-spacing: -1px; }
+h2 { font-size: 16px; }
+h3 { font-size: 12px; font-weight: bold; }
+
+#page-list li,
+#search-list li {
+    padding-top: 4px;
+    list-style-type: none;
+    list-style-position: inside;
+}
+
+#page-list li a,
+#search-list li a {
+    display: inline-block;
+    height: 1.5em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    text-decoration: none;
+    font-weight: bolder;
+
+}
+#page-list li a:hover,
+#search-list li a:hover {
+    background-color: #ddf;
+}
