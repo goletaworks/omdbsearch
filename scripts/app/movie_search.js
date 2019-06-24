@@ -37,8 +37,15 @@ let addMovieToList = function(movie, listName){
         alert(`You don't have a movie list named ${listName}`);
         return;
     }
-    list.items.push(movie);
-    Datastore.set(db);
+
+    let found = list.items.findIndex((item) => {
+        return item.imdbID === movie.imdbID;
+    });
+
+    if(found === -1){
+        list.items.push(movie);
+        Datastore.set(db);
+    }
 };
 
 // ------------------------------------------------------------------------------------------------

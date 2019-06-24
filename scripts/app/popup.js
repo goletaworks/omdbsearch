@@ -20,12 +20,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // ------------------------------------------------------------------------------------------------
 var initialize = function(){
+    console.log('popup initialize');
     var movieListsEl = jQuery('#movie-lists');
     var prefsJson = jQuery('#prefs-json');
-    var datastore = Datastore.get();
-    var lists = datastore.lists;
+    var db = Datastore.get();
+    var lists = db.lists;
 
-    var moviesAccordion = jQuery('#collapseMovies');
+    var moviesAccordion = jQuery('#movie-list');
 
     var ndx = 0;
     movieListsEl.empty();
@@ -38,8 +39,9 @@ var initialize = function(){
         var movieListEl = createMovieListCard(movieListTitle, lists[movieListTitle].items, ndx++);
         movieListsEl.append(movieListEl);
     }
+    console.log(`movieListsEl length: ${movieListsEl.length}`);
 
-    prefsJson.text(JSON.stringify(datastore.preferences));
+    prefsJson.text(JSON.stringify(db.preferences));
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -52,20 +54,23 @@ var createMovieListCard = function(movieListTitle, movies, id){
     movies.forEach(function(movie){
         let imdbUrl = 'https://www.imdb.com/title/' + movie.imdbID;
         let ratings = getRatingsValues(movie);
-        moviesTable += `<tr><th style="width: 200px">Title/year</th><th>Runtime</th><th>Genre</th><th>IMDB</th><th>Metacritic</th><th>Rotten Tomatoes</th><th>Plot</th></tr>` +
-                '<tr>' +
+        moviesTable += '<tr>' +
                 `<td><a href="${imdbUrl}" target="imdb">${movie.Title} (${movie.Year})</a></td>` +
                 `<td>${movie.Runtime}</td>` +
                 `<td>${movie.Genre}</td>` +
                 `${ratings}` +
-                `<td>${movie.Plot}</td></tr>`;
+                `<td><div class="cell-content-h-max">${movie.Plot}</div></td></tr>`;
     });
 
     var card = `<div class="card"><div class="card-header" id="heading-${id}"><div>` +
             `<a href="#" data-toggle="collapse" data-target="#collapse-${id}" aria-expanded="true" aria-controls="collapse-${id}">` +
             `${movieListTitle}</a></div></div>` +
-            `<div id="collapse-${id}" class="collapse" aria-labelledby="heading-${id}" data-parent="#collapseMovies">` +
-            `<div class="card-body"><table class="visit-info"><thead><tr><th>URL</th><th>Time</th></tr></thead><tbody>${moviesTable}</tbody></table></div>` +
+            `<div id="collapse-${id}" class="collapse" aria-labelledby="heading-${id}" data-parent="#collapseMovieLists">` +
+            `<div class="card-body">` +
+            `<table class="movie-info"><thead>` +
+            `<tr><th style="width: 200px">Title/year</th><th>Runtime</th><th>Genre</th><th>IMDB</th><th>Metacritic</th><th>Rotten Tomatoes</th><th>Plot</th></tr>` +
+            `</thead>` +
+            `<tbody>${moviesTable}</tbody></table></div>` +
             `</div></div>`;
     return card;
 };
@@ -82,3 +87,5 @@ let getRatingsValues = function(movie){
     }
     return ratings;
 };
+
+initialize();

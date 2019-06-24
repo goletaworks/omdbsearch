@@ -2,7 +2,7 @@ body {
     font-size: 12px;
     color: black;
     padding: 20px;
-    width: 640px;
+    width: 720px;
 }
 
 .row.heading,
@@ -12,7 +12,7 @@ body {
 .row.main {
     border: 1px solid #ddd;
     border-radius: 5px;
-    height: 280px;
+    height: 380px;
     overflow-y: auto;
 }
 
@@ -42,8 +42,7 @@ body {
     padding: 4px;
 }
 
-#headingPages.card-header,
-#headingSearches.card-header,
+#headingMovieLists.card-header,
 #headingPrefs.card-header {
     background-color: #ddf;
     font-weight: bold;
@@ -64,41 +63,38 @@ body {
     background-color: #efe;
 }
 
-#headingPages.card-header a:hover,
-#headingSearches.card-header a:hover,
+#headingMovieLists.card-header a:hover,
 #headingPrefs.card-header a:hover {
     background-color: #eef;
 }
 
 .card-body {
     padding: 4px;
+    overflow-x: scroll;
 }
 
 
-table.visit-info, table.query-info {
+table.movie-info {
     width: 100%;
-    table-layout: fixed;
     border-collapse: collapse;
     border: 1px solid #eee;
 }
 
-table.visit-info td,
-table.visit-info th,
-table.query-info td,
-table.query-info th {
+table.movie-info thead {
+    vertical-align: top;
+    text-align: left;
+}
+
+table.movie-info td,
+table.movie-info th {
     padding: 4px;
     border: 1px solid #eee;
+    vertical-align: top;
 }
 
-
-table.visit-info thead th:nth-child(1),
-table.query-info thead th:nth-child(1) {
-    width: 70%;
-    overflow-x: hidden;
-}
-table.visit-info thead th:nth-child(2),
-table.query-info thead th:nth-child(2) {
-    width: 30%;
+table.movie-info td div.cell-content-h-max {
+    height: 4em;
+    overflow-y: scroll;
 }
 
 h1 { font-size: 24px; letter-spacing: -1px; }

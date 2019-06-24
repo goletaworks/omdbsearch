@@ -5,7 +5,6 @@
         <title>Movie Search</title>
         <script src="../scripts/app/defaults.js"></script>
         <script src="../scripts/app/datastore.js"></script>
-        <script src="../scripts/app/popup.js"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
         crossorigin="anonymous">
@@ -33,7 +32,7 @@
         </div>
         <div class="row main">
             <div class="col">
-                <div class="accordion" id="movieLists">
+                <div class="accordion" id="omdbMovieSearch">
                     <div class="card">
                         <div class="card-header" id="headingPrefs">
                             <div>
@@ -43,7 +42,7 @@
                             </div>
                         </div>
 
-                        <div id="collapsePrefs" class="collapse" aria-labelledby="headingPrefs" data-parent="#movieLists">
+                        <div id="collapsePrefs" class="collapse" aria-labelledby="headingPrefs" data-parent="#omdbMovieSearch">
                             <div class="card-body">
                                 <div>
                                     <button class="btn" id="btn-restore-defaults">Restore Preference Defaults</button>
@@ -60,15 +59,17 @@
                         <div class="card-header" id="headingMovieLists">
                             <div>
                                 <a href="#" data-toggle="collapse" data-target="#collapseMovieLists" aria-expanded="false" aria-controls="collapseMovieLists">
-                                Movie Lists (TODO)
+                                Movie Lists
                                 </a>
                             </div>
                         </div>
 
-                        <div id="collapseMovieLists" class="collapse" aria-labelledby="headingMovieLists" data-parent="#movieListLists">
+                        <div id="collapseMovieLists" class="collapse" aria-labelledby="headingMovieLists" data-parent="#omdbMovieSearch">
                             <div class="card-body">
                                 <button class="btn btn-light" id="btn-clear-movies">Remove All Movie Lists</button>
+
                                 <div class="accordion" id="movie-lists">
+
                                 </div>
                             </div>
                         </div>
@@ -76,9 +77,9 @@
                 </div>
             </div>
         </div>
-
-        <!-- <script src="../scripts/lib/jquery-3.3.1.min.js"></script>
-        <script src="../scripts/lib/popper-1.14.7.min.js"></script>
-        <script src="../scripts/lib/bootstrap-4.3.1.min.js"></script> -->
+        <script src="../scripts/lib/jquery-3.3.1.min.js"></script>
+        <script src="../scripts/lib/bootstrap-4.3.1.min.js"></script>
+        <!--<script src="../scripts/lib/popper-1.14.7.min.js"></script>-->
+        <script src="../scripts/app/popup.js"></script>
     </body>
 </html>
