@@ -20,7 +20,7 @@ this repo.
 properly.)
 
 Then, on any web page, select the text of a movie title, right-click, and choose
-OMDB Movie Search -> Get Movie Details. A new web page is displayed showing the
+__OMDB Movie Search -> Get Movie Details__. A new web page is displayed showing the
 movie details, including ratings from IMDB, Rotten Tomatoes, and Metacritic.
 
 TODO: allow creating movie lists, automatically sorted based on user-specified
