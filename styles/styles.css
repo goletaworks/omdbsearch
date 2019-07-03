@@ -22,6 +22,16 @@ body {
     margin: 5px;
 }
 
+.btn-remove-movie {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px;
+    margin: 5px;
+    background-color: #b00;
+    color: #fff;
+    border-radius: 5px;
+}
+
 .accordion {
     padding: 5px;
     border-radius: 0;

@@ -34,7 +34,7 @@ let addMovieToList = function(movie, listName){
     let db = Datastore.get();
     let list = db.lists[listName];
     if(!list){
-        alert(`You don't have a movie list named ${listName}`);
+        alert(`You don't have a movie list named "${listName}"`);
         return;
     }
 
@@ -67,32 +67,6 @@ let doPostRequest = async function(url){
         console.error(err);
         return false;
     });
-};
-
-// ------------------------------------------------------------------------------------------------
-let generateComparisonPage = function(result){
-    let reviews = '', colHeadings = '';
-    result.Ratings.forEach( rating => {
-        colHeadings += `<th>${rating.Source}</th>`;
-        reviews += `<td>${rating.Value}</td>`;
-    });
-
-    let imdbUrl = `${imdbBaseUrl}/title/${result.imdbID}`;
-
-    let html =
-            '<html><head><title>Movie Search Results</title><style>' +
-            'body, p { font-family: sans-serif; font-size: 16px; padding: 10px; } table { text-align: left; } td { padding : 5px; }' +
-            '</style></head><body><div class="movie-comparison">' +
-            '<table>' +
-            `<tr><th style="width: 100px">Title/year</th><th>Runtime</th><th>Genre</th>${colHeadings}<th>Plot</th></tr>` +
-            '<tr>' +
-            `<td><a href="${imdbUrl}" target="imdb">${result.Title} (${result.Year})</a></td>` +
-            `<td>${result.Runtime}</td>` +
-            `<td>${result.Genre}</td>` +
-            `${reviews}` +
-            `<td>${result.Plot}</td></tr></table>` +
-            '</body></html>';
-    return html;
 };
 
 // ------------------------------------------------------------------------------------------------

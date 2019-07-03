@@ -1,4 +1,5 @@
 let Defaults = {
+    omdbApiKey : '',
     lists : {
         'Highest Rated Horror' : {
             items : [],
