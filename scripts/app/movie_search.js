@@ -1,4 +1,4 @@
-// OMDB API url: http://www.omdbapi.com/?i=tt3896198&apikey=9969b1c7
+// OMDB API url: http://www.omdbapi.com/?i=tt3896198&apikey=xxxxxx
 // REQ1: link to IMDB for aditionnal info (e.g.: https://www.imdb.com/title/tt2290065/parentalguide?ref_=tt_stry_pg#advisory-nudity)
 
 let omdbBaseUrl = 'http://www.omdbapi.com';
